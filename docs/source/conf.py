@@ -8,20 +8,20 @@ import sys
 sys.path.insert(0, os.path.abspath("_ext"))
 sys.path.insert(0, os.path.abspath("."))
 
-# ─── プロジェクト情報 ──────────────────────────────────────
+# ─── プロジェクト情報 ──────────────────────────────────────────────────────
 project = "Sphinx マスタークラス"
 copyright = "2024, Sphinx マスタークラス"
 author = "学習者"
 release = "1.0"
 
-# ─── 拡張 ──────────────────────────────────────────────
+# ─── 拡張 ──────────────────────────────────────────────────────────
 extensions = [
-    # ─ 記法サポート ──────────────────────────
+    # ─ 記法サポート ────────────────────────
     "myst_parser",              # Markdown(MyST) を解釈する
-    # ─ 表示機能拡張 ──────────────────────
+    # ─ 表示機能拡張 ──────────────────
     "sphinx_copybutton",        # コードブロックにコピーボタン
     "sphinxcontrib.mermaid",    # Mermaid 図サポート
-    # ─ Sphinx 標準拡張 ────────────────────
+    # ─ Sphinx 標準拡張 ──────────────────
     "sphinx.ext.todo",          # TODO 管理
     "sphinx.ext.autodoc",       # Python docstring から API 文書を自動生成
     "sphinx.ext.napoleon",      # NumPy/Google スタイル docstring を解釈
@@ -31,6 +31,7 @@ extensions = [
     "card_directive",           # カードブロックディレクティブ
     "badge_role",               # インラインバッジロール
     "step_counter",             # 自動番号ステップディレクティブ
+    "exercise_directive",       # 演習ディレクティブ
 ]
 
 # Markdown と reStructuredText の両方を受け付ける
@@ -53,27 +54,32 @@ language = "ja"
 templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
-# ─── HTML 出力 ─────────────────────────────────────────
+# ─── HTML 出力 ───────────────────────────────────────────────────────
 html_theme = "furo"
 html_title = "Sphinx マスタークラス"
 html_static_path = ["_static"]
-html_css_files = ["custom.css", "card-directive.css", "badge-role.css"]
+html_css_files = [
+    "custom.css",
+    "card-directive.css",
+    "badge-role.css",
+    "exercise-directive.css",
+]
 
 html_theme_options = {
     "navigation_with_keys": True,
     "top_of_page_button": "edit",
 }
 
-# ─── intersphinx ─────────────────────────────────────
-intersphinx_mapping = {
+# ─── intersphinx ──────────────────────────────────────────────────
+int ersphinx_mapping = {
     "python": ("https://docs.python.org/ja/3", None),
     "sphinx": ("https://www.sphinx-doc.org/en/master", None),
 }
 
-# ─── todo ─────────────────────────────────────────────
+# ─── todo ──────────────────────────────────────────────────────────
 todo_include_todos = True
 
-# ─── autodoc ─────────────────────────────────────────
+# ─── autodoc ─────────────────────────────────────────────────────────
 autodoc_default_options = {
     "members": True,
     "member-order": "bysource",
@@ -88,7 +94,7 @@ napoleon_numpy_docstring = True
 napoleon_use_param = True
 napoleon_use_rtype = True
 
-# ─── PDF (LaTeX) 出力 ───────────────────────────────────
+# ─── PDF (LaTeX) 出力 ───────────────────────────────────────────────
 # 日本語 PDF は uplatex（jsbook）+ dvipdfmx が最も実績のある組み合わせ
 latex_engine = "uplatex"
 

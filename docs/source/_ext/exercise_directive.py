@@ -5,6 +5,12 @@ from docutils import nodes
 from docutils.parsers.rst import directives
 from sphinx.util.docutils import SphinxDirective
 
+_LEVELS = ("beginner", "intermediate", "advanced")
+
+
+def _level_choice(argument: str) -> str:
+    return directives.choice(argument, _LEVELS)
+
 
 class exercise_node(nodes.General, nodes.Element):
     pass
@@ -18,9 +24,7 @@ class ExerciseDirective(SphinxDirective):
     final_argument_whitespace = True
     has_content = True
     option_spec = {
-        "level": directives.choice_argument(
-            lambda x: x, ["beginner", "intermediate", "advanced"]
-        ),
+        "level": _level_choice,
     }
 
     def run(self) -> list[nodes.Node]:
@@ -61,14 +65,12 @@ def depart_exercise_html(self, node: exercise_node) -> None:
 def visit_exercise_latex(self, node: exercise_node) -> None:
     title = node["title"].replace("_", "\_").replace("#", "\#")
     self.body.append(
-        f"\\begin{{tcolorbox}}[title={{{title}}},"
-        "colback=blue!5!white,colframe=blue!60!black,"
-        "fonttitle=\\bfseries]\n"
+        f"\\begin{{quote}}\n\\textbf{{{title}}}\n\n"
     )
 
 
 def depart_exercise_latex(self, node: exercise_node) -> None:
-    self.body.append("\\end{tcolorbox}\n")
+    self.body.append("\\end{quote}\n")
 
 
 def visit_exercise_text(self, node: exercise_node) -> None:
