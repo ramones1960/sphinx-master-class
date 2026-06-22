@@ -1,4 +1,4 @@
-# 第7章： autodoc — Python から API 文書を自動生成
+# autodoc — Python から API 文書を自動生成
 
 ## 学習目標
 

@@ -1,4 +1,4 @@
-# 第5章：出力（HTML / PDF / ePub）
+# 出力（HTML / PDF / ePub）
 
 ## 学習目標
 

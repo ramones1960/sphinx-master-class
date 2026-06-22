@@ -91,7 +91,7 @@ docs/source/
 
 :::{exercise} 演習 7-1: autodoc で API 文書を生成する
 
-1. `make html` でビルドし、第7章のトップページを開く
+1. `make html` でビルドし、{doc}`autodoc </07_autodoc/index>` の章のトップページを開く
 2. `Calculator` クラスの API 文書が自動生成されていることを確認する
 3. `sample_lib/calculator.py` に新しいメソッドを追加し、再ビルドで API 文書に反映されることを確認する
 :::
