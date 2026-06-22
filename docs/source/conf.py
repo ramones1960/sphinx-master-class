@@ -156,11 +156,11 @@ latex_elements = {
 \end{titlepage}
 """,
     "tableofcontents": r"""
+\frontmatter
+\pagestyle{normal}
 \clearpage
-\pagenumbering{roman}
 \sphinxtableofcontents
 \clearpage
-\pagenumbering{arabic}
 """,
 }
 

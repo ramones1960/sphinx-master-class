@@ -12,6 +12,16 @@
    :special-members: __init__
 ```
 
+## TextProcessor クラス
+
+```{eval-rst}
+.. autoclass:: sample_lib.text_utils.TextProcessor
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members: __init__
+```
+
 ## モジュール全体
 
 ```{eval-rst}
