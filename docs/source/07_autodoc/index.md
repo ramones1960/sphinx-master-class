@@ -4,7 +4,7 @@
 
 - `sphinx.ext.autodoc` で docstring から API 文書を自動生成する
 - Napoleon 拡張で Google / NumPy スタイル docstring を書く
-- 実际のライブラリから自動生成された API リファレンスを確認する
+- 実際のライブラリから自動生成された API リファレンスを確認する
 
 ```{toctree}
 :maxdepth: 2

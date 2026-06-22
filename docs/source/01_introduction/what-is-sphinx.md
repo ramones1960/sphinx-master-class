@@ -51,7 +51,7 @@ Sphinx 本体は最小限で、機能は**拡張**として `conf.py` の `exten
 
 | 拡張 | 役割 |
 |---|---|
-| `myst_parser` | Markdown(MyST) を書けるようにする |
+| `myst_parser` | 文書のソースファイルを Markdown(MyST) で記述できるようにする |
 | `sphinx.ext.autodoc` | Python の docstring から API 文書を自動生成 |
 | `sphinx.ext.intersphinx` | 他プロジェクトの文書（Python 公式など）を相互参照 |
 | `sphinxcontrib.mermaid` | Mermaid 図を埋め込む |
@@ -61,17 +61,22 @@ Sphinx 本体は最小限で、機能は**拡張**として `conf.py` の `exten
 ## reStructuredText と MyST Markdown の関係
 
 Sphinx の**本来のフォーマットは reStructuredText（`.rst`）**ですが、
-`myst-parser` という拡張で **Markdown（`.md`）も書ける**ようになっています。
+`myst-parser` という拡張を有効にすると、
+**文書のソースファイルそのものを Markdown（`.md`）で記述できる**ようになります。
+つまり、各ページの `.md` ファイルがそのまま Sphinx 文書のソースになり、
+`.rst` と同じディレクティブ・相互参照・autodoc などの機能を Markdown の記法のまま利用できます。
+`.rst` と `.md` は 1 つのプロジェクト内に混在させることもできます。
 
 | | reStructuredText `.rst` | MyST Markdown `.md` |
 |---|---|---|
-| 位置づけ | Sphinx 標準・最も機能が豊富 | Markdown ベースで対応機能を加える |
+| 位置づけ | Sphinx 標準・最も機能が豊富 | Markdown ベースで Sphinx 機能を利用できる |
+| ソースとして書けるか | 書ける | 書ける（`myst-parser` が必要） |
 | 学習コスト | 高め（独自記法） | 低め（Markdown ベース） |
 | ディレクティブ | `.. note::` | ` ```{note}` または `:::note` |
 | 混在 | 可能（1 プロジェクト内で両方使える） | 可能 |
 
 :::{note}
-この教材は **MyST Markdown** を主張として使用し、
+この教材は文書のソースとして **MyST Markdown** を主体に使用し、
 第3章で RST の基礎も学びます。
 :::
 

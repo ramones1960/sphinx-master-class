@@ -1,7 +1,7 @@
 # conf.py 基礎
 
 `conf.py` は Sphinx プロジェクトの「設定ファイル」です。
-**Python スクリプトとして実行される**ため、変数・検索・ os 模ジュールなどを自由に使えます。
+**Python スクリプトとして実行される**ため、変数・関数・os モジュールなどを自由に使えます。
 
 ## 最小構成
 
@@ -26,8 +26,8 @@ html_theme = "furo"
 
 ```python
 project = "Sphinx マスタークラス"  # プロジェクト名（サイトタイトルなどに使用）
-copyright = "2024, 棄者"           # 著作権表記
-author = "棄者"                   # 著者（PDF の表紙などに使用）
+copyright = "2024, 著者名"          # 著作権表記
+author = "著者名"                  # 著者（PDF の表紙などに使用）
 release = "1.0"                      # バージョン
 ```
 
@@ -43,13 +43,13 @@ extensions = [
 ]
 ```
 
-### ウァーニングレベル
+### 警告の抑制
 
 ```python
-suppress_warnings = ["myst.xref_missing"]  # 特定警告を抑制
+suppress_warnings = ["myst.xref_missing"]  # 特定の警告を抑制
 ```
 
-ビルド時に警告が出て完成かない場合、出力内容を読んで原因を特定することが大切です。
+ビルド時に警告が出た場合は、安易に抑制せず、まず出力内容を読んで原因を特定することが大切です。
 
 ### ソースファイルの設定
 
@@ -60,7 +60,7 @@ source_suffix = {
     ".md": "markdown",
 }
 
-# 馨図 • OS 生成ファイルを除外
+# ビルド成果物・OS が生成するファイルを除外
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 ```
 

@@ -20,9 +20,9 @@ install-docker
 |---|---|
 | {doc}`Sphinx とは <what-is-sphinx>` | 設計思想・OSS・用途 |
 | {doc}`ローカルインストール <install-local>` | venv での導入・最初のビルド |
-| {doc}`Docker 環境 <install-docker>` | Docker コンテナでのゼロ摩擦セットアップ |
+| {doc}`Docker 環境 <install-docker>` | Docker コンテナでの手間のないセットアップ |
 
 :::{tip}
-**貴重なこと**: Sphinx は「小さく動くサンプルを作り、新機能を少しずつ追加する」とわかりやすいです。
+**コツ**: Sphinx は「小さく動くサンプルを作り、機能を少しずつ追加していく」と理解しやすくなります。
 導入時に完璧な設定を目指す必要はありません。
 :::

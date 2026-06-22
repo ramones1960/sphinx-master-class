@@ -2,13 +2,13 @@
 
 ## 主要テーマの比較
 
-| テーマ | 特弴 | 向きでない用途 |
+| テーマ | 特徴 | 向いている用途 |
 |---|---|---|
 | **Furo** | モダン・設定レス・ダークモード対応 | 文書サイト全般 |
-| **alabaster** | Sphinx 標準同桁（インストール不要） | シンプルなドキュメント |
-| **sphinx-rtd-theme** | ReadTheDocs 風 | OSS での実績強い |
+| **alabaster** | Sphinx 標準同梱（インストール不要） | シンプルなドキュメント |
+| **sphinx-rtd-theme** | ReadTheDocs 風 | OSS での採用実績が豊富 |
 | **pydata-sphinx-theme** | Pandas/NumPy などのデータ系プロジェクト | データサイエンス |
-| **Book theme** | 屦節形式で展開 | 书籍スタイルの大車な文書 |
+| **Book theme** | 章・節形式で展開 | 書籍スタイルの大規模な文書 |
 
 ## Furo テーマ（この教材で使用）
 

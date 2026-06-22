@@ -61,7 +61,7 @@ def setup(app):
 class CardDirective(SphinxDirective):
     required_arguments = 1    # タイトルは必須
     optional_arguments = 0
-    final_argument_whitespace = True  # タイトルにスペースを允許
+    final_argument_whitespace = True  # タイトルにスペースを許可
     has_content = True
     option_spec = {
         "icon": directives.unchanged,  # :icon: オプション

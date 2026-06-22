@@ -76,10 +76,10 @@ latex_elements = {
 }
 ```
 
-## HTML 記事メタデータ
+## HTML の外観・メタデータ
 
 ```python
-# 表紙画像（Furo・sphinx_rtd_themeなどが対応）
+# ロゴ画像（Furo・sphinx_rtd_theme などが対応）
 html_logo = "_static/logo.png"
 html_favicon = "_static/favicon.ico"
 
@@ -89,12 +89,12 @@ html_title = "My Documentation"
 # 追加 CSS
 html_css_files = ["custom.css"]
 
-# 自巻きで】「小型」表示を無効化
+# 単一段落だけのリスト項目をコンパクトに表示する
 html_compact_lists = True
 ```
 
 ## ✓ チェックリスト
 
-- [ ] `intersphinx_mapping` に Python 公式文書を追加して和参照を試す
+- [ ] `intersphinx_mapping` に Python 公式文書を追加して相互参照を試す
 - [ ] `copybutton_prompt_text` で `$` プロンプトを除外してテストする
 - [ ] `latex_elements["preamble"]` でページフッターを追加し、PDF ビルドで確認する

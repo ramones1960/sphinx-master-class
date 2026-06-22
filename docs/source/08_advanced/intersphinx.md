@@ -31,7 +31,7 @@ Python のパス: {py:class}`pathlib.Path`
 ## objects.inv のダウンロード確認
 
 ```bash
-# 底数一：対象プロジェクトの objects.inv を参照
+# 対象プロジェクトの objects.inv の中身を表示する
 python -m sphinx.ext.intersphinx https://docs.python.org/ja/3/objects.inv
 
 # 使用可能なラベルの一覧を確認する
