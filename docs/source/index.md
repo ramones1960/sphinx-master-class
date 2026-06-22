@@ -101,3 +101,8 @@
 ```
 
 バッジロールの例： {badge-new}`New` {badge-tip}`実践的` {badge-warn}`要注意`
+
+```{raw} latex
+\mainmatter
+\pagestyle{normal}
+```
