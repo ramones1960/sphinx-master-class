@@ -139,6 +139,17 @@ latex_elements = {
   \renewcommand{\footrulewidth}{0.4pt}%
 }
 
+% jsbook 既定の headings へ切り替わってもページ番号を必ずフッターに集約する保険。
+% （ヘッダ右上にページ番号が出る現象を構造的に防ぐ）
+\fancypagestyle{headings}{%
+  \fancyhf{}%
+  \fancyhead[L]{\small\nouppercase{\leftmark}}%
+  \fancyhead[R]{\small Sphinx マスタークラス}%
+  \fancyfoot[C]{\small \thepage\ /\ \pageref{LastPage}}%
+  \renewcommand{\headrulewidth}{0.4pt}%
+  \renewcommand{\footrulewidth}{0.4pt}%
+}
+
 \pagestyle{normal}
 \setcounter{tocdepth}{2}
 """,
