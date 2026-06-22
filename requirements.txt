@@ -1,0 +1,17 @@
+# Sphinx 本体
+sphinx>=7.3.0
+
+# テーマ
+furo>=2024.8.6
+
+# Markdown(MyST) サポート
+myst-parser>=3.0.0
+
+# コードブロックのコピーボタン
+sphinx-copybutton>=0.5.2
+
+# Mermaid 図（フローチャート・シーケンス図など）
+sphinxcontrib-mermaid>=0.9.2
+
+# ライブリロード開発サーバー
+sphinx-autobuild>=2024.0.0

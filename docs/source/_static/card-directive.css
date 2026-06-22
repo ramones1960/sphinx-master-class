@@ -1,0 +1,52 @@
+/* ==========================================================================
+   Card directive styles
+   ========================================================================== */
+
+.sphinx-card {
+  border: 1px solid var(--color-background-border, #ddd);
+  border-radius: 8px;
+  margin: 1.25rem 0;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s ease;
+}
+
+.sphinx-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.sphinx-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-background-secondary, #f5f5f5);
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid var(--color-background-border, #ddd);
+}
+
+.sphinx-card-icon {
+  font-size: 1.1em;
+}
+
+.sphinx-card-title {
+  font-weight: 700;
+  font-size: 1em;
+  color: var(--color-brand-primary, #2980b9);
+}
+
+.sphinx-card-body {
+  padding: 0.75rem 1rem 1rem;
+}
+
+.sphinx-card-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Dark mode */
+[data-theme="dark"] .sphinx-card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .sphinx-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}

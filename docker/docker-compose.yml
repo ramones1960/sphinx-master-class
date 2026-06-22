@@ -1,0 +1,54 @@
+# Sphinx マスタークラス — Docker Compose
+#
+# サービス:
+#   dev  : ライブリロード開発サーバー (http://localhost:8000)
+#   html : HTML 一括ビルド
+#   pdf  : PDF ビルド（TeX Live 使用）
+#   epub : ePub ビルド
+
+services:
+  # ─── ライブリロード開発サーバー ─────────────────────
+  dev:
+    build:
+      context: ..       # リポジトリルートを context に
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ..:/workspace   # ソースの変更をリアルタイムに反映
+    ports:
+      - "8000:8000"
+    working_dir: /workspace
+    command: >
+      sphinx-autobuild docs/source docs/build/html
+      --host 0.0.0.0
+      --port 8000
+      --watch docs/source
+
+  # ─── HTML ビルド ─────────────────────────────────
+  html:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ..:/workspace
+    working_dir: /workspace
+    command: sphinx-build -b html docs/source docs/build/html
+
+  # ─── PDF ビルド ──────────────────────────────────
+  pdf:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ..:/workspace
+    working_dir: /workspace
+    command: sphinx-build -M latexpdf docs/source docs/build
+
+  # ─── ePub ビルド ─────────────────────────────────
+  epub:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ..:/workspace
+    working_dir: /workspace
+    command: sphinx-build -b epub docs/source docs/build/epub

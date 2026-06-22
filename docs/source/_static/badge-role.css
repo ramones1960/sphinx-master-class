@@ -1,0 +1,42 @@
+/* ==========================================================================
+   Badge role styles
+   ========================================================================== */
+
+.badge {
+  display: inline-block;
+  padding: 0.15em 0.55em;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1.4;
+  border-radius: 0.3em;
+  vertical-align: middle;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0.15em;
+}
+
+.badge-new {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+.badge-tip {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.badge-warn {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.badge-info {
+  background-color: #95a5a6;
+  color: #fff;
+}
+
+/* Dark mode – slightly desaturated so they don't blind on dark BG */
+[data-theme="dark"] .badge-new  { background-color: #27ae60; }
+[data-theme="dark"] .badge-tip  { background-color: #2980b9; }
+[data-theme="dark"] .badge-warn { background-color: #d35400; }
+[data-theme="dark"] .badge-info { background-color: #7f8c8d; }
