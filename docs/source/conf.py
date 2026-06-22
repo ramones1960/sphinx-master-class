@@ -79,6 +79,16 @@ intersphinx_mapping = {
 # ─── todo ──────────────────────────────────────────────────────────
 todo_include_todos = True
 
+# ─── Mermaid ───────────────────────────────────────────────────────
+# HTML はブラウザ上の mermaid.js で図を描画する（mermaid_output_format の
+# デフォルト "raw"）。一方 PDF / ePub では mermaid-cli (mmdc) が図を画像化する。
+# Docker コンテナ内では root 実行のため、Chromium を --no-sandbox で
+# 起動する Puppeteer 設定を mmdc に渡す（この設定が無いと mmdc が失敗する）。
+mermaid_params = [
+    "--puppeteerConfigFile",
+    os.path.abspath("mermaid-puppeteer-config.json"),
+]
+
 # ─── autodoc ─────────────────────────────────────────────────────────
 autodoc_default_options = {
     "members": True,
