@@ -71,7 +71,7 @@ html_theme_options = {
 }
 
 # ─── intersphinx ──────────────────────────────────────────────────
-int ersphinx_mapping = {
+intersphinx_mapping = {
     "python": ("https://docs.python.org/ja/3", None),
     "sphinx": ("https://www.sphinx-doc.org/en/master", None),
 }
