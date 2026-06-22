@@ -19,11 +19,28 @@ flowchart LR
 # Debian/Ubuntu
 sudo apt-get install -y \
   texlive-latex-recommended texlive-latex-extra \
-  texlive-fonts-recommended texlive-lang-japanese latexmk
+  texlive-fonts-recommended tex-gyre \
+  texlive-lang-japanese latexmk
 
 # macOS (Homebrew)
 brew install --cask mactex
 ```
+
+:::{important}
+`tex-gyre` パッケージを忘れないでください。Sphinx の LaTeX 出力は標準で
+`tgtermes` / `tgheros`（TeX Gyre フォント）を読み込みます。これが無いと
+**`tgtermes.sty が見つからない`** というエラーで PDF ビルドが失敗します。
+:::
+
+:::{note}
+**Mermaid 図を PDF に含める場合**は、図を画像化する
+[mermaid-cli](https://github.com/mermaid-js/mermaid-cli)（`mmdc` コマンド）が
+別途必要です（Node.js + Chromium を使用）。
+未インストールの場合、ビルドは成功しますが図は省略され、
+`command 'mmdc' cannot be run` という警告が出ます。
+**Docker 環境にはこれらがすべて同梱されている**ため、`make docker-pdf` なら
+追加設定なしで図入りの PDF が生成できます。
+:::
 
 ## ビルドコマンド
 

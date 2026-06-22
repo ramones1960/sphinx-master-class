@@ -107,4 +107,7 @@ def setup(app):
     )
     app.add_directive("card", CardDirective)
     app.add_css_file("card-directive.css")
+    # LaTeX ビジターが \begin{mdframed} を使うため、PDF ビルド時に
+    # mdframed パッケージをプリアンブルへ読み込ませる。
+    app.add_latex_package("mdframed")
     return {"version": "0.1", "parallel_read_safe": True}

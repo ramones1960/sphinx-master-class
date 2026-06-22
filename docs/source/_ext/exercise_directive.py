@@ -63,7 +63,7 @@ def depart_exercise_html(self, node: exercise_node) -> None:
 
 
 def visit_exercise_latex(self, node: exercise_node) -> None:
-    title = node["title"].replace("_", "\_").replace("#", "\#")
+    title = node["title"].replace("_", r"\_").replace("#", r"\#")
     self.body.append(
         f"\\begin{{quote}}\n\\textbf{{{title}}}\n\n"
     )
