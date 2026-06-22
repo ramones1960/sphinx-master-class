@@ -5,6 +5,16 @@
 #   html : HTML 一括ビルド
 #   pdf  : PDF ビルド（TeX Live 使用）
 #   epub : ePub ビルド
+#
+# プロキシ設定:
+#   docker/.env ファイルに HTTP_PROXY / HTTPS_PROXY / NO_PROXY を記述するか、
+#   シェルの環境変数として事前にエクスポートしてください。
+#   例: cp docker/.env.example docker/.env
+
+x-proxy-args: &proxy-args
+  HTTP_PROXY: ${HTTP_PROXY:-}
+  HTTPS_PROXY: ${HTTPS_PROXY:-}
+  NO_PROXY: ${NO_PROXY:-}
 
 services:
   # ─── ライブリロード開発サーバー ─────────────────────
@@ -12,6 +22,10 @@ services:
     build:
       context: ..       # リポジトリルートを context に
       dockerfile: docker/Dockerfile
+      args:
+        <<: *proxy-args
+    environment:
+      <<: *proxy-args
     volumes:
       - ..:/workspace   # ソースの変更をリアルタイムに反映
     ports:
@@ -28,6 +42,10 @@ services:
     build:
       context: ..
       dockerfile: docker/Dockerfile
+      args:
+        <<: *proxy-args
+    environment:
+      <<: *proxy-args
     volumes:
       - ..:/workspace
     working_dir: /workspace
@@ -38,6 +56,10 @@ services:
     build:
       context: ..
       dockerfile: docker/Dockerfile
+      args:
+        <<: *proxy-args
+    environment:
+      <<: *proxy-args
     volumes:
       - ..:/workspace
     working_dir: /workspace
@@ -48,6 +70,10 @@ services:
     build:
       context: ..
       dockerfile: docker/Dockerfile
+      args:
+        <<: *proxy-args
+    environment:
+      <<: *proxy-args
     volumes:
       - ..:/workspace
     working_dir: /workspace
