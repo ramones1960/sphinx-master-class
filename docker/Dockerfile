@@ -10,6 +10,17 @@ FROM python:3.12-slim
 
 LABEL org.opencontainers.image.description="Sphinx マスタークラス学習環境"
 
+# プロキシ設定（環境変数 HTTP_PROXY / HTTPS_PROXY / NO_PROXY から取得）
+ARG HTTP_PROXY
+ARG HTTPS_PROXY
+ARG NO_PROXY
+ENV HTTP_PROXY=${HTTP_PROXY} \
+    HTTPS_PROXY=${HTTPS_PROXY} \
+    NO_PROXY=${NO_PROXY} \
+    http_proxy=${HTTP_PROXY} \
+    https_proxy=${HTTPS_PROXY} \
+    no_proxy=${NO_PROXY}
+
 # TeX Live（日本語 PDF に必要）+ make
 RUN apt-get update && apt-get install -y --no-install-recommends \
     make \
