@@ -1,6 +1,6 @@
 # Docker 環境セットアップ
 
-Docker を使うと、Python / TeX Live のインストールなしに **革数の昔騒環境**で Sphinx（HTML + PDF）を利用できます。
+Docker を使うと、Python / TeX Live をホストにインストールすることなく、**クリーンで再現性の高い環境**で Sphinx（HTML + PDF）を利用できます。
 
 ## 前提条件
 

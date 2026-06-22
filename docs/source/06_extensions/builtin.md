@@ -1,6 +1,6 @@
 # Sphinx 標準拡張
 
-`sphinx.ext.*` は Sphinx に同桁されている拡張です。
+`sphinx.ext.*` は Sphinx に同梱されている拡張です。
 追加インストール不要で、`conf.py` の `extensions` に追加するだけで利用できます。
 
 ## sphinx.ext.autodoc
@@ -55,7 +55,7 @@ todo_include_todos = True  # False にすると本番ビルドで TODO を非表
 
 ## sphinx.ext.viewcode
 
-autocode で生成された API 文書に「ソースを見る」リンクを追加します。
+autodoc で生成された API 文書に「ソースを見る」リンクを追加します。
 
 ```python
 extensions = ["sphinx.ext.autodoc", "sphinx.ext.viewcode"]

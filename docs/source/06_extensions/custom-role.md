@@ -4,7 +4,7 @@
 
 ## badge_role.py の実装
 
-`{badge-new}`, `{badge-tip}`, `{badge-warn}` の 3 種類のバッジビーラールを実装しています。
+`{badge-new}`, `{badge-tip}`, `{badge-warn}` の 3 種類のバッジロールを実装しています。
 
 **使用例**
 

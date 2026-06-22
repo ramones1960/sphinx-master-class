@@ -44,7 +44,7 @@ sphinx-build -W -b html docs/source docs/build/html
 # 詳細出力（デバッグ時）
 sphinx-build -v -b html docs/source docs/build/html
 
-# ビルドキャッシュを无視して全ビルド
+# ビルドキャッシュを無視して全ビルド
 sphinx-build -a -b html docs/source docs/build/html
 ```
 

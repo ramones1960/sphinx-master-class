@@ -19,7 +19,7 @@
 ```
 
 ```{warning}
-間違えると問題が起きる项目。
+間違えると問題が起きる項目。
 ```
 
 ```{caution}
@@ -81,7 +81,7 @@ subdir/page3
 | `numbered` | 章番号を付ける |
 | `glob` | `guide/*` のように glob パターンで一括登録 |
 
-## figure / image — 画像插入
+## figure / image — 画像挿入
 
 ````markdown
 ```{figure} _static/architecture.png

@@ -12,7 +12,7 @@ on:
   pull_request:
     branches: [main]
 
-perms:
+permissions:
   contents: read
   pages: write
   id-token: write
@@ -100,7 +100,7 @@ jobs:
           path: docs/build/linkcheck/
 ```
 
-## プルリクエストでビルド棄証を実行する
+## プルリクエストでビルド検証を実行する
 
 ```yaml
 # PR 時は -W フラグで警告をエラー扱いにする

@@ -19,7 +19,7 @@ epub_language = "ja"
 epub_show_urls = "footnote"   # URL を脚注として表示
 ```
 
-## 其他のビルダー
+## その他のビルダー
 
 | ビルダー | コマンド | 用途 |
 |---|---|---|

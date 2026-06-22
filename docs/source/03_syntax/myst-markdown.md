@@ -1,7 +1,9 @@
 # MyST Markdown
 
 MyST（Markedly Structured Text）は、Markdown に Sphinx の機能（ディレクティブ・ロール）を追加した拡張仕様です。
-**普通の Markdown の写き方はそのまま使える**ため、既存の Markdown ライターにとって導入コストが低いです。
+`myst-parser` 拡張を有効にすると、**`.md` ファイルを文書のソースとして直接書ける**ようになり、
+`.rst` で書ける内容（ディレクティブ・相互参照・autodoc など）を Markdown の記法のまま利用できます。
+**普通の Markdown の書き方はそのまま使える**ため、既存の Markdown 利用者でも低い導入コストで始められます。
 
 ## ディレクティブの書き方
 
@@ -75,7 +77,7 @@ Sphinx
 : Python 製のドキュメントビルダー
 
 MyST
-: Markdown に Sphinx 機能を加えた履定仕様
+: Markdown に Sphinx 機能を加えた拡張仕様
 ```
 
 ## Mermaid 図

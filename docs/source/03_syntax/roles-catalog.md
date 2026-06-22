@@ -11,7 +11,7 @@
 用語集:         {term}`Sphinx`
 ```
 
-## Python ドメインロール（autodoc と疲用）
+## Python ドメインロール（autodoc と併用）
 
 ```markdown
 Python クラス:     {py:class}`pathlib.Path`
@@ -19,7 +19,7 @@ Python 関数:     {py:func}`os.path.join`
 Python メソッド:   {py:meth}`str.format`
 Python 属性:     {py:attr}`Path.name`
 Python 例外:     {py:exc}`ValueError`
-Python 模ジュール: {py:mod}`pathlib`
+Python モジュール: {py:mod}`pathlib`
 ```
 
 `intersphinx` と組み合わせると、Python 公式ドキュメントへのリンクになります。
@@ -54,7 +54,7 @@ Sphinx 公式: {ref}`sphinx:toctree-directive`
 バッジロール: {badge-new}`New` {badge-tip}`推奨` {badge-warn}`非推奨`
 ```
 
-表示例: {badge-new}`New` {badge-tip}`推奨` {badge-warn}`非推推`
+表示例: {badge-new}`New` {badge-tip}`推奨` {badge-warn}`非推奨`
 
 作成方法は {doc}`../06_extensions/custom-role` で学びます。
 

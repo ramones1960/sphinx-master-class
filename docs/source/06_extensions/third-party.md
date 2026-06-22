@@ -2,7 +2,7 @@
 
 ## myst-parser
 
-Markdown（MyST）形式で文書を書けるようにする拡張です。この教材でも使用しています。
+文書のソースファイルを Markdown（MyST）形式で書けるようにする拡張です。この教材でも使用しています。
 
 ```bash
 pip install myst-parser
@@ -54,7 +54,7 @@ sequenceDiagram
 
 ## sphinx-design
 
-Grig・カード・ドロップダウンなどの UI コンポーネントを提供します。
+グリッド・カード・ドロップダウンなどの UI コンポーネントを提供します。
 
 ```bash
 pip install sphinx-design

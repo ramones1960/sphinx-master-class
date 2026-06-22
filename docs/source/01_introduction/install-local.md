@@ -3,15 +3,15 @@
 ## 前提条件
 
 - Python 3.9 以上（`python --version` で確認）
-- pip（Python に同桁）
+- pip（Python に同梱）
 
 :::{tip}
-**なぜ venv を使うのか?** 他の Python プロジェクトと依存バージョンが衝突することを防ぐためです。
-Sphinx のバージョンアップで別プロジェクトが壊れることもあるため、プロジェクトごとに分離するのがべストプラクティスです。
+**なぜ venv を使うのか?** 他の Python プロジェクトと依存バージョンが衝突するのを防ぐためです。
+Sphinx のバージョンアップで別プロジェクトが壊れることもあるため、プロジェクトごとに環境を分離するのがベストプラクティスです。
 :::
 
 (local-step1)=
-## STEP 1: 仓指環境をクローンする
+## STEP 1: リポジトリをクローンする
 
 ```bash
 git clone https://github.com/ramones1960/sphinx-master-class.git
@@ -19,7 +19,7 @@ cd sphinx-master-class
 ```
 
 (local-step2)=
-## STEP 2: venv 仒想環境を作成・有効化する
+## STEP 2: venv 仮想環境を作成・有効化する
 
 ```bash
 # リポジトリルート直下に .venv を作成
@@ -79,7 +79,7 @@ sphinx-autobuild docs/source docs/build/html --host 0.0.0.0 --port 8000
 
 http://localhost:8000 で確認できます。
 
-## 料金のあるビルドエラー・警告への対処
+## よくあるビルドエラー・警告への対処
 
 Sphinx はビルド時にさまざまな情報を出力します。
 
