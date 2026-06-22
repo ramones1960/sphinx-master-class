@@ -1,0 +1,100 @@
+/* ==========================================================================
+   Global Furo theme overrides
+   ========================================================================== */
+
+/* Code blocks */
+.highlight pre {
+  font-size: 0.88em;
+  line-height: 1.55;
+}
+
+/* Inline code */
+code.literal {
+  background: var(--color-background-secondary);
+  border: 1px solid var(--color-background-border);
+  border-radius: 3px;
+  padding: 0.1em 0.3em;
+  font-size: 0.875em;
+}
+
+/* Admonition tweaks */
+.admonition {
+  border-radius: 6px;
+  margin: 1.25rem 0;
+}
+
+.admonition > .admonition-title {
+  border-radius: 5px 5px 0 0;
+  font-weight: 700;
+}
+
+/* Note color override */
+.admonition.note {
+  border-left: 4px solid #4a90d9;
+}
+
+/* Tip color override */
+.admonition.tip {
+  border-left: 4px solid #2ecc71;
+}
+
+/* Warning color override */
+.admonition.warning {
+  border-left: 4px solid #e67e22;
+}
+
+/* Section headings */
+article h1 {
+  border-bottom: 2px solid var(--color-brand-primary);
+  padding-bottom: 0.3rem;
+}
+
+article h2 {
+  border-bottom: 1px solid var(--color-background-border);
+  padding-bottom: 0.2rem;
+}
+
+/* Navigation sidebar */
+.sidebar-tree .toctree-l1 > .reference {
+  font-weight: 600;
+}
+
+/* Table improvements */
+table.docutils {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table.docutils th {
+  background: var(--color-background-secondary);
+  font-weight: 700;
+}
+
+table.docutils td,
+table.docutils th {
+  border: 1px solid var(--color-background-border);
+  padding: 0.5rem 0.75rem;
+}
+
+/* Definition lists */
+dt {
+  font-weight: 700;
+  color: var(--color-brand-primary);
+}
+
+/* Copy button integration */
+.copybtn {
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.copybtn:hover {
+  opacity: 1;
+}
+
+/* Dark mode adjustments (Furo auto-detects) */
+@media (prefers-color-scheme: dark) {
+  code.literal {
+    background: rgba(255, 255, 255, 0.07);
+  }
+}

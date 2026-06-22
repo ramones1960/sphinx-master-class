@@ -1,0 +1,68 @@
+/* ==========================================================================
+   Exercise directive styles
+   ========================================================================== */
+
+.exercise {
+  border: 1px solid #4a90d9;
+  border-left: 4px solid #4a90d9;
+  border-radius: 6px;
+  margin: 1.5rem 0;
+  overflow: hidden;
+  background: var(--color-background-primary, #fff);
+}
+
+.exercise-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #eaf3fb;
+  padding: 0.55rem 1rem;
+  font-weight: 700;
+  color: #2471a3;
+  border-bottom: 1px solid #b6d4f0;
+}
+
+.exercise-icon {
+  font-size: 1.1em;
+}
+
+.exercise-title {
+  font-size: 0.95em;
+}
+
+.exercise-body {
+  padding: 0.75rem 1rem 1rem;
+}
+
+.exercise-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Difficulty variants */
+.exercise.exercise-intermediate {
+  border-color: #e67e22;
+}
+.exercise.exercise-intermediate .exercise-header {
+  background: #fef5e7;
+  color: #935116;
+  border-bottom-color: #f5cba7;
+}
+
+.exercise.exercise-advanced {
+  border-color: #e74c3c;
+}
+.exercise.exercise-advanced .exercise-header {
+  background: #fdedec;
+  color: #922b21;
+  border-bottom-color: #f1948a;
+}
+
+/* Dark mode */
+[data-theme="dark"] .exercise {
+  background: var(--color-background-secondary);
+}
+[data-theme="dark"] .exercise-header {
+  background: rgba(74, 144, 217, 0.15);
+  color: #7fb3e0;
+  border-bottom-color: rgba(74, 144, 217, 0.3);
+}
